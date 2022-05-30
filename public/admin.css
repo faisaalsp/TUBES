@@ -12,10 +12,11 @@
 */
 
 body{
-    background-image: url('/Res/gradient_2.jpg');
+    background-image: url(../design/gradient_2.jpg);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
 }
+
 .box-large{
     background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.7));
     height: 45vh;
@@ -24,16 +25,19 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .box-title{
     font-weight: 300;
     color: #f1eee9;
 }
+
 .box-large form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .box-large form input{
     width: 50vh;
     height: 5vh;
@@ -43,6 +47,7 @@ body{
     background-color: rgba(241, 238, 233, 0.7);
     padding-left: 3vh;
 }
+
 .box-large form input[type=submit]{
     background-color: #73777B;
     color: #f1eee9;
@@ -54,6 +59,7 @@ body{
 .box-large form input[type=submit]:hover{
     background-color: #444444;
 }
+
 .navigation{
     flex: 1;
     width: 40vh;
@@ -68,9 +74,11 @@ body{
     border-radius: 25px;
     color: #F1EEE9;
 }
+
 .navigation .user{
     margin-bottom: 10vh;
 }
+
 .link {
   display: flex;
   /* margin: 2rem 0rem; */
@@ -78,18 +86,22 @@ body{
   align-items: center;
   transition: 0.3s;
 }
+
 .link:hover{
     color: #7FB5FF;
     cursor: pointer;
 }
+
 .link h2 {
   padding: 0rem 2rem;
   opacity: 0.7;
 }
+
 .navigation .logout{
     padding-top: 8vh;
     height: 10vh;
 }
+
 .logout img{
     height: 30px;
     width: 30px;
@@ -102,25 +114,30 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
+
 select{
     overflow: hidden;
     margin-top: 50px;
 }
+
 .head .top h1{
     font-size: 50px;
     font-weight: normal;
     margin-bottom: 5px;
 }
+
 .head .dropdown select{
     border-radius: 25px;
     width: 25vh;
     height: 5vh;
 }
+
 .head .bot{
     display: flex;
     flex-direction: row;
 
 }
+
 .head .bot .filter{
     background-color: #444444;
     color: #f1eee9;
@@ -131,21 +148,25 @@ select{
     opacity: 0.7;
     transition: 0.3s;
 }
+
 .head .bot .filter:hover{
     background-color: #f1eee9;
     color: #444444;
     cursor: pointer;
     opacity: 1;
 }
+
 .head .bot .filter p{
     margin: 5px;
 }
+
 .head .bot #filter-active{
     background-color: #f1eee9;
     color: #444444;
     border: 2px solid #444444;
     opacity: 1;
 }
+
 .head .bot #filter-active{
     cursor: default;
 }
