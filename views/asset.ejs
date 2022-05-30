@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset.css">
+    <title>Administrator</title>
+</head>
+<body>
+    <!-- <div class="box-large">
+        <form action="#">
+            <h1 class="box-title">Admin</h1>
+            <input type="text" name="username" id="username">
+            <input type="password" name="password" id="password">
+            <input type="submit" value="Login">
+        </form>
+    </div> -->
+    <div class="navigation">
+        <div class="user">
+            <img src="../design/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
+            <h3>Faisal Surya</h3>
+            <p>Administrator</p>
+        </div>
+        <div class="links">
+            <a href=""></a>
+            <a href="#" class="link">
+                <img src="../design/right-from-bracket-solid.svg" alt="">
+                <h2>Manage Topic</h2>
+            </a>
+            <a href="#" class="link">
+                <img src="../design/svg-dark/book-solid.svg" alt="">
+                <h2>Upload Topic</h2>
+            </a>
+            <a href="#" class="link">
+                <img src="../design/svg-light/user-pen-solid.svg" alt="">
+                <h2>Manage Account</h2>
+            </a>
+            <a href="#" class="link">
+                <img src="./design/svg-light/calendar-solid.svg" alt="">
+                <h2>Manage Timeline</h2>
+            </a>
+        </div>
+        <div class="logout">
+            <img src="./Res/svg-light/right-from-bracket-solid.svg" alt="">
+        </div>
+    </div>
+<br>
+<br>
+<div class="navigation timeline">
+    <div class="user">
+        <img src="./Res/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
+        <h3>Faisal Surya</h3>
+        <p>Administrator</p>
+    </div>
+    <div class="duedate">
+        <table>
+            <tr>
+                <td><h3>Review due : </h3></td>
+                <td><h2>01-01-2021</h2></td>
+            </tr>
+            <tr>
+                <td><h3>Upload due : </h3></td>
+                <td><h2>01-01-2021</h2></td>
+            </tr>
+        </table>
+        
+        
+    </div>
+    <div class="links">
+        <a href=""></a>
+        <a href="#" class="link">
+            <img src="./Res/svg-light/book-solid.svg" alt="">
+            <h2>Manage Topic</h2>
+        </a>
+        <a href="#" class="link">
+            <img src="./Res/svg-light/cloud-arrow-up-solid.svg" alt="">
+            <h2>Upload Topic</h2>
+        </a>
+        <a href="#" class="link">
+            <img src="./Res/svg-light/user-pen-solid.svg" alt="">
+            <h2>Manage Account</h2>
+        </a>
+        <a href="#" class="link">
+            <img src="./Res/svg-light/calendar-solid.svg" alt="">
+            <h2>Manage Timeline</h2>
+        </a>
+    </div>
+    <div class="logout">
+        <img src="./Res/svg-light/right-from-bracket-solid.svg" alt="">
+    </div>
+</div>
+
+
+    <div class="head">
+        <div class="top">
+            <h1>Topic</h1>
+            <div class="dropdown">
+                <select name="dropdown-tahun" id="">
+                    <option value="value">1</option>
+                    <option value="value">2</option>
+                    <option value="value">3</option>
+                    <option value="value">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="bot">
+            <div class="filter" id="filter-active"><p>All</p></div>
+            <div class="filter"><p>Open</p></div>
+            <div class="filter"><p>Approved</p></div>
+            <div class="filter"><p>Declined</p></div>
+        </div>
+    </div>
+
+    <div class="box-content-admin">
+        <div class="box-front">
+            <div class="left">
+                <h2>Judul</h2>
+                <h3>Nama Dosen</h3>
+                <p>Nomor</p>
+            </div>
+            <div class="right hover">
+                <img src="./Res/svg-light/cloud-arrow-down-solid-hover.svg" alt="">
+                <img src="./Res/svg-light/gear-solid-hover-1.svg" alt="">
+            </div>
+            <div class="right">
+                <img src="./Res/svg-light/cloud-arrow-down-solid.svg" alt="">
+                <img src="./Res/svg-light/gear-solid.svg" alt="">
+            </div>
+            
+        </div>
+        <div class="box-back">
+            <h2>Approved</h2>
+            <h2>Reguler</h2>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="box-admin-large">
+        <div class="head">
+            <div class="left">
+                <h1>Judul</h1>
+                <h2>Regular</h2>
+            </div>
+            <div class="right">
+                <img src="./Res/svg-light/circle-chevron-left-solid.svg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <table>
+                <tr>
+                    <td><h2>Nama Dosen</h2></td>
+                    <td class="right"><h2>Faisal Surya</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Nomor</h2></td>
+                    <td class="right"><h2>1234681736</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Peminatan</h2></td>
+                    <td class="right"><h2>Data Science</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Status</h2></td>
+                    <td class="right">
+                            <Select>
+                                <optgroup>
+                                    <option selected="selected"value="Declined">Declined</option>
+                                    <option value="Accepted">Accepted</option>
+                                    <option value="Accepted">Accepted</option>
+                                </optgroup>
+                            </Select>
+                    </td>
+                </tr>
+            </table>
+            <form action="#">
+                <table class="table-small">
+                    <tr>
+                        <td><h2>Anda</h2></td>
+                        <td class="right">
+                            <Select>
+                                <optgroup>
+                                    <option selected="selected"value="Ok">Ok</option>
+                                    <option value="Accepted">Accepted</option>
+                                    <option value="Accepted">Accepted</option>
+                                </optgroup>
+                            </Select>
+                            
+                        </td>
+                        <td class="right">
+                            <img src="./Res/svg-light/trash-solid.svg" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 1</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        <td class="right">
+                            <img src="./Res/svg-light/trash-solid.svg" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 2</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        <td class="right">
+                            <img src="./Res/svg-light/trash-solid.svg" alt="">
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="box-admin-large dosen">
+        <div class="head">
+            <div class="left">
+                <h1>Judul</h1>
+                <h2>Regular</h2>
+            </div>
+            <div class="right">
+                <img src="./Res/svg-dark/circle-chevron-left-solid.svg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <div class="dropdown">
+                <select name="dropdown-tahun" id="">
+                    <option value="taken">taken</option>
+                    <option value="value">2</option>
+                    <option value="value">3</option>
+                    <option value="value">4</option>
+                </select>
+            </div>
+            <table>
+                <tr>
+                    <td><h2>Status</h2></td>
+                    <!-- <td class="right"><h2>Faisal Surya</h2></td> -->
+                </tr>
+            </table>
+            <form action="#">
+                <table class="table-small">
+                    <tr>
+                        <td><h2>Anda</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 1</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 2</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        
+                    </tr>
+                </table>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="box-admin-large dosen">
+        <div class="head">
+            <div class="left">
+                <h1>Judul</h1>
+                <h2>Regular</h2>
+            </div>
+            <div class="right">
+                <img src="./Res/svg-dark/circle-chevron-left-solid.svg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            
+            <table>
+                <tr>
+                    <td><h2>Status</h2></td>
+                    <!-- <td class="right"><h2>Faisal Surya</h2></td> -->
+                </tr>
+            </table>
+            <form action="#">
+                <table class="table-small">
+                    <tr>
+                        <td><h2>Anda</h2></td>
+                        <td class="right">
+                            <Select>
+                                <optgroup>
+                                    <option selected="selected"value="Declined">Declined</option>
+                                    <option value="Accepted">Accepted</option>
+                                    <option value="Accepted">Accepted</option>
+                                </optgroup>
+                            </Select>
+                    </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 1</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><h2>Dosen 2</h2></td>
+                        <td class="right">
+                            <h3>Approved</h3>
+                        </td>
+                        
+                    </tr>
+                </table>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="box-comment">
+        <div class="left">
+            <div class="head">
+                <h1>Nama Dosen</h1>
+            </div>
+            <div class="content">
+                <h2>Topiknya bagus banget sih bun</h2>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./Res/svg-light/trash-solid.svg" alt="">
+            <img src="./Res/svg-light/reply-solid.svg" alt="">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="box-comment input">
+        <form action="#">
+            <input type="text" placeholder="Type your message here...">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="box-admin-large input">
+        <div class="content">
+            <form action="#">
+                <table>
+                    <tr class="row">
+                        <td><label for="nomor">Nomor</label></td>
+                        <td>
+                            <input type="text" name="nomor">
+                        </td>
+                    </tr>
+                    <tr class="row">
+                        <td><label for="judul">Judul</label></td>
+                        <td>
+                            <input type="text" name="judul">
+                        </td>
+                    </tr>
+                    
+                    <tr class="row small">
+                        <td><label for="peminatan">Peminatan</label></td>
+                        <td>
+                            <select name="peminatan" id="peminatan">
+                                <option value="Data Science" selected>Data Science</option>
+                                <option value="Data Science" selected>Data Science</option>
+                            </select>
+                        </td>
+                        <td><label for="peminatan">Peminatan</label></td>
+                        <td>
+                            <select name="peminatan" id="peminatan">
+                                <option value="Data Science" selected>Data Science</option>
+                                <option value="Data Science" selected>Data Science</option>
+                            </select>
+                        </td>
+                        <td><label for="file">File</label></td>
+                        <td><img src="./Res/svg-light/cloud-arrow-up-solid.svg" alt=""></td>
+                    </tr>
+                    <tr class="row">
+                        
+                    </tr>
+                    
+                </table>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="box-comment acc">
+        <div class="left">
+            <div class="head">
+                <h1>Faisal Surya</h1>
+            </div>
+            <div class="content">
+                <h2>faisalgans@gmail.com</h2>
+            </div>
+        </div>
+        
+        <div class="right">
+            <img src="./Res/svg-light/gear-solid-hover.svg" alt="">
+        </div>
+    </div>
+<br>
+<br>
+    <div class="box-admin-large acc">
+        <div class="head">
+            <div class="left">
+                <h1>Faisal Surya</h1>
+                
+            </div>
+            <div class="right">
+                <img src="./Res/svg-light/circle-chevron-left-solid.svg" alt="">
+            </div>
+        </div>
+        <div class="content">
+           <form action="#">
+                <table>
+                    <tr>
+                        <td><h2>Nama </h2></td>
+                        <td class="right"><h2>Faisal Surya</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>NIK</h2></td>
+                        <td class="right"><h2>1234681736</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Email</h2></td>
+                        <td class="right"><h2>faisalgans@gmail.com</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Username</h2></td>
+                        <td class="right"><h2>Faiasl uyeh</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>password</h2></td>
+                        <td class="right"><h2>faisalmanis</h2></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Save">
+           </form>
+        </div>
+</div>
+<br>
+<br>
+<div class="box-admin-large timeline">
+    <div class="head">
+        <div class="left">
+            <h1>Timeline</h1>
+        </div> 
+    </div>
+    <div class="content">
+       <form action="#">
+            <table>
+                <tr>
+                    <td><h2>From : </h2></td>
+                    <td><input type="date"></td>
+
+                    <td><h2>To :</h2></td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+            </table>
+            <input type="submit" value="Save">
+       </form>
+    </div>
+</div>   
+<br>
+<br>
+
+<div class="box-comment dosen">
+    <div class="left">
+        <div class="head">
+            <h1>Nama Dosen</h1>
+        </div>
+        <div class="content">
+            <h2>Topiknya bagus banget sih bun</h2>
+        </div>
+    </div>
+    <div class="right">
+        <!-- <img src="./Res/svg-light/trash-solid.svg" alt=""> -->
+        <img src="./Res/svg-dark/reply-solid.svg" alt="">
+    </div>
+    <div class="box-back">
+        <form action="#">
+            <input type="text">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+</body>
+</html>

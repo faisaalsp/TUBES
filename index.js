@@ -11,14 +11,19 @@ app.use(express.static(publicPath));
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended: true}));
 
-app.get('/', async(req, res) => {
-    res.render('login', {
+app.get('/logAdmin', async(req, res) => {
+    res.render('logAdmin', {
+
+    });
+});
+app.get('/admin', async(req, res) => {
+    res.render('admin', {
 
     });
 });
 
-app.get('/admin', async(req, res) => {
-    res.render('admin', {
+app.get('/asset', async(req, res) => {
+    res.render('asset', {
 
     });
 });
