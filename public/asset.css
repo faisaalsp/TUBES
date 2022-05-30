@@ -599,4 +599,10 @@ content:url("../design/svg-light/gear-solid-hover-1.svg");
     background-color: #444444;
     border: none;
     color: #f1eee9;
+<<<<<<< HEAD
+=======
+}
+.box-admin-large.timeline td input[type=submit]{
+    margin-top: 10px;
+>>>>>>> 246e38fd11c0f6d5769d05939acb307e965c6e44
 }
