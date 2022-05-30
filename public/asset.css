@@ -14,7 +14,7 @@
 body{
     background-image: url('../design/gradient_2.jpg');
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 30px 0;
+    margin: 3vh 0;
 }
 .box-large{
     background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.7));
@@ -57,7 +57,7 @@ body{
 .navigation{
     flex: 1;
     width: 40vh;
-    height: 100%;
+    height: 85vh;
     padding: 10vh 0 0 0;
     display: flex;
     flex-direction: column;
@@ -279,7 +279,7 @@ select{
 
 .box-admin-large{
     width: 120vh;
-    height: 85vh;
+    height: 80vh;
     background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.9));
     color: #F1EEE9;
     overflow: hidden;
@@ -328,7 +328,7 @@ select{
 }
 
 .box-admin-large .head .right img:hover{
-    content:url("./Res/svg-light/circle-chevron-left-solid-hover.svg");
+    content:url("../design/svg-light/circle-chevron-left-solid-hover.svg");
     cursor: pointer;
 }
 .box-admin-large table{
@@ -562,7 +562,7 @@ select{
     width: 10%;
 }
 .box-comment.acc .right img:hover{
-content:url("./Res/svg-light/gear-solid-hover-1.svg");
+content:url("../design/svg-light/gear-solid-hover-1.svg");
 }
 .box-comment .right img:hover{
     
@@ -599,7 +599,4 @@ content:url("./Res/svg-light/gear-solid-hover-1.svg");
     background-color: #444444;
     border: none;
     color: #f1eee9;
-}
-.box-admin-large.timeline td input[type=submit]{
-    margin-top: ;
 }

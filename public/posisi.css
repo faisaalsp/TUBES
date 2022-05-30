@@ -1,4 +1,4 @@
-.pg1{
+.loginAdmin{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,41 @@
     overflow: hidden;
 }
 
-.pg2{
+.dasboardAdmin{
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.uploadAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.manageAkunAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.manageTimelineAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.manageTopikAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
 }

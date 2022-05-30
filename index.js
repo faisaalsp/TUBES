@@ -11,19 +11,44 @@ app.use(express.static(publicPath));
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended: true}));
 
+app.get('/asset', async(req, res) => {
+    res.render('asset', {
+
+    });
+});
+
 app.get('/logAdmin', async(req, res) => {
     res.render('logAdmin', {
 
     });
 });
-app.get('/admin', async(req, res) => {
-    res.render('admin', {
+
+app.get('/dasboardAdmin', async(req, res) => {
+    res.render('dasboardAdmin', {
 
     });
 });
 
-app.get('/asset', async(req, res) => {
-    res.render('asset', {
+app.get('/uploadAdmin', async(req, res) => {
+    res.render('uploadAdmin', {
+
+    });
+});
+
+app.get('/manageAkunAdmin', async(req, res) => {
+    res.render('manageAkunAdmin', {
+
+    });
+});
+
+app.get('/manageTimelineAdmin', async(req, res) => {
+    res.render('manageTimelineAdmin', {
+
+    });
+});
+
+app.get('/manageTopikAdmin', async(req, res) => {
+    res.render('manageTopikAdmin', {
 
     });
 });
