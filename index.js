@@ -17,50 +17,50 @@ app.get('/asset', async(req, res) => {
     });
 });
 
-app.get('/logAdmin', async(req, res) => {
-    res.render('logAdmin', {
+app.get('/adminLogin', async(req, res) => {
+    res.render('adminLogin', {
 
     });
 });
 
-app.get('/commentAdmin', async(req, res) => {
-    res.render('commentAdmin', {
+app.get('/adminComment', async(req, res) => {
+    res.render('adminComment', {
 
     });
 });
 
-app.get('/dasboardAdmin', async(req, res) => {
-    res.render('dasboardAdmin', {
+app.get('/adminDasboard', async(req, res) => {
+    res.render('adminDasboard', {
 
     });
 });
 
-app.get('/uploadAdmin', async(req, res) => {
-    res.render('uploadAdmin', {
+app.get('/adminUpload', async(req, res) => {
+    res.render('adminUpload', {
 
     });
 });
 
-app.get('/manageAkunAdmin', async(req, res) => {
-    res.render('manageAkunAdmin', {
+app.get('/adminManageAkun', async(req, res) => {
+    res.render('adminManageAkun', {
 
     });
 });
 
-app.get('/manageTimelineAdmin', async(req, res) => {
-    res.render('manageTimelineAdmin', {
+app.get('/adminManageTimeline', async(req, res) => {
+    res.render('adminManageTimeline', {
 
     });
 });
 
-app.get('/manageTimelineAdmin2', async(req, res) => {
-    res.render('manageTimelineAdmin2', {
+app.get('/adminManageTimeline2', async(req, res) => {
+    res.render('adminManageTimeline2', {
 
     });
 });
 
-app.get('/manageTopikAdmin', async(req, res) => {
-    res.render('manageTopikAdmin', {
+app.get('/adminManageTopik', async(req, res) => {
+    res.render('adminManageTopik', {
 
     });
 });

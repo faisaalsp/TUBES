@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset.css">
+    <link rel="stylesheet" href="posisi.css">
+    <title>Manage Topik</title>
+</head>
+<body class="manageTopikAdmin">
+    <div class="left">
+        <div class="navigation">
+            <div class="user">
+                <img src="../design/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
+                <h3>Faisal Surya</h3>
+                <p>Administrator</p>
+            </div>
+            <div class="links">
+                <a href=""></a>
+                <a href="adminDasboard" class="link">
+                    <img src="../design/right-from-bracket-solid.svg" alt="">
+                    <h2>Manage Topic</h2>
+                </a>
+                <a href="adminUpload" class="link">
+                    <img src="../design/svg-dark/book-solid.svg" alt="">
+                    <h2>Upload Topic</h2>
+                </a>
+                <a href="adminManageAkun" class="link">
+                    <img src="../design/svg-light/user-pen-solid.svg" alt="">
+                    <h2>Manage Account</h2>
+                </a>
+                <a href="adminManageTimeline" class="link">
+                    <img src="./design/svg-light/calendar-solid.svg" alt="">
+                    <h2>Manage Timeline</h2>
+                </a>
+            </div>
+            <div class="logout">
+                <img src="./design/svg-light/right-from-bracket-solid.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="box-admin-large">
+            <div class="head">
+                <div class="left">
+                    <h1>Judul</h1>
+                    <h2>Regular</h2>
+                </div>
+                <div class="right">
+                    <img src="../design/svg-light/circle-chevron-left-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td><h2>Nama Dosen</h2></td>
+                        <td class="right"><h2>Faisal Surya</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Nomor</h2></td>
+                        <td class="right"><h2>1234681736</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Peminatan</h2></td>
+                        <td class="right"><h2>Data Science</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Status</h2></td>
+                        <td class="right">
+                                <Select>
+                                    <optgroup>
+                                        <option selected="selected"value="Declined">Declined</option>
+                                        <option value="Accepted">Accepted</option>
+                                    </optgroup>
+                                </Select>
+                        </td>
+                    </tr>
+                </table>
+                <form action="#">
+                    <table class="table-small">
+                        <tr>
+                            <td><h2>Anda</h2></td>
+                            <td class="right">
+                                <Select>
+                                    <optgroup>
+                                        <option selected="selected"value="Ok">OK</option>
+                                        <option value="Accepted">NO</option>
+                                        <option value="Accepted">INQ</option>
+                                    </optgroup>
+                                </Select>
+                                
+                            </td>
+                            <td class="right">
+                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h2>Dosen 1</h2></td>
+                            <td class="right">
+                                <h3>Approved</h3>
+                            </td>
+                            <td class="right">
+                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h2>Dosen 2</h2></td>
+                            <td class="right">
+                                <h3>Approved</h3>
+                            </td>
+                            <td class="right">
+                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Save">
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -600,3 +600,7 @@ content:url("../design/svg-light/gear-solid-hover-1.svg");
     border: none;
     color: #f1eee9;
 }
+
+.right{
+    margin-left: 5vh;
+}

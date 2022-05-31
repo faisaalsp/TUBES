@@ -1,4 +1,5 @@
 .loginAdmin{
+    background-image: url('../design/gradient_4.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +9,7 @@
 }
 
 .dasboardAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -15,6 +17,7 @@
 }
 
 .uploadAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -23,6 +26,7 @@
 }
 
 .manageAkunAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -31,6 +35,7 @@
 }
 
 .manageTimelineAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -39,6 +44,7 @@
 }
 
 .manageTimelineAdmin2{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -47,6 +53,7 @@
 }
 
 .manageTopikAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -55,6 +62,7 @@
 }
 
 .commentAdmin{
+    background-image: url('../design/gradient_1.jpg');
     display: flex;
     flex-direction: row;
     justify-content: left;
