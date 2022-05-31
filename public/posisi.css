@@ -69,3 +69,39 @@
     align-items: center;
     overflow: hidden;
 }
+
+.loginDosen{
+    background-image: url('../design/gradient_6.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dasboardDosen{
+    background-image: url('../design/gradient_5.jpg');
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.browseDosen{
+    background-image: url('../design/gradient_5.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.uploadDosen{
+    background-image: url('../design/gradient_5.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}

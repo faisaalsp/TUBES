@@ -64,9 +64,8 @@ body{
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.7));
+    background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
     border-radius: 25px;
-    color: #F1EEE9;
 }
 .navigation .user{
     margin-bottom: 10vh;
@@ -84,7 +83,7 @@ body{
 }
 .links a{
     text-decoration: none;
-    color: #F1EEE9;
+    color: #171717;
 }
 .link {
   display: flex;

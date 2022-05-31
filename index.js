@@ -65,6 +65,30 @@ app.get('/adminManageTopik', async(req, res) => {
     });
 });
 
+app.get('/dosenLogin', async(req, res) => {
+    res.render('dosenLogin', {
+
+    });
+});
+
+app.get('/dosenDasboard', async(req, res) => {
+    res.render('dosenDasboard', {
+
+    });
+});
+
+app.get('/dosenUpload', async(req, res) => {
+    res.render('dosenUpload', {
+
+    });
+});
+
+app.get('/dosenBrowse', async(req, res) => {
+    res.render('dosenBrowse', {
+
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is ready, listening on port ${PORT}`);
 });
