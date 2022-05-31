@@ -38,7 +38,23 @@
     overflow: hidden;
 }
 
+.manageTimelineAdmin2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
 .manageTopikAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.commentAdmin{
     display: flex;
     flex-direction: row;
     justify-content: left;

@@ -23,6 +23,12 @@ app.get('/logAdmin', async(req, res) => {
     });
 });
 
+app.get('/commentAdmin', async(req, res) => {
+    res.render('commentAdmin', {
+
+    });
+});
+
 app.get('/dasboardAdmin', async(req, res) => {
     res.render('dasboardAdmin', {
 
@@ -43,6 +49,12 @@ app.get('/manageAkunAdmin', async(req, res) => {
 
 app.get('/manageTimelineAdmin', async(req, res) => {
     res.render('manageTimelineAdmin', {
+
+    });
+});
+
+app.get('/manageTimelineAdmin2', async(req, res) => {
+    res.render('manageTimelineAdmin2', {
 
     });
 });
