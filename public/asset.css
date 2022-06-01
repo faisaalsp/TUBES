@@ -14,10 +14,10 @@
 body{
     background-image: url('../design/gradient_2.jpg');
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 3vh 0;
+    margin:  0;
 }
 .box-large{
-    background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.7));
+    background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
     height: 45vh;
     width: 90vh;
     border-radius: 25px;
@@ -57,7 +57,7 @@ body{
 .navigation{
     flex: 1;
     width: 40vh;
-    height: 85vh;
+    height: 90vh;
     padding: 10vh 0 0 0;
     display: flex;
     flex-direction: column;
@@ -70,6 +70,9 @@ body{
 .navigation .user{
     margin-bottom: 10vh;
 }
+.navigation .user i{
+    margin-bottom: 20px;
+}
 .navigation.timeline .user{
     margin-bottom: 5vh;
 }
@@ -81,7 +84,7 @@ body{
 .navigation.timeline .duedate table{
     width: 100%;
 }
-.links a{
+a{
     text-decoration: none;
     color: #171717;
 }
@@ -92,18 +95,27 @@ body{
   align-items: center;
   transition: 0.3s;
 }
-.link:hover{
+.link.active h2{
+    color: #7FB5FF;
+}
+.link.active i{
+    color: #7FB5FF;
+}
+.link:hover h2{
     color: #7FB5FF;
     cursor: pointer;
+}
+.link:hover i{
+    color: #7FB5FF;
 }
 
 .link h2 {
   padding: 0rem 2rem;
-  opacity: 0.7;
+  color: #444444;
 }
-.link img{
-    height: 30px;
-    width: 30px;
+.link i{
+    color: #444444;
+    transition: 0.3s;
 }
 
 .navigation .logout{
@@ -113,11 +125,16 @@ body{
 .navigation .logout:hover{
     cursor: pointer;
 }
-.logout img{
-    height: 30px;
-    width: 30px;
+.logout i{
+    color: #444444;
+    transition: 0.3s;
 }
-
+.logout i:hover{
+    color: #7FB5FF;
+}
+.head{
+    margin-bottom: 5vh;
+}
 .head .top{
     color: #f1eee9;
     border-bottom: 2px solid #f1eee9;
@@ -189,8 +206,8 @@ select{
     justify-content: space-between;
     width: 120vh;
     height: 15vh;
-    background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.9));
-    color: #F1EEE9;
+    background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
+    color: #171717;
     overflow: hidden;
     padding: 0 20px;
     border-radius: 20px;
@@ -232,20 +249,14 @@ select{
     align-items: center;
     width: 20%;
 }
-.box-content-admin .box-front .hover{
-    position: absolute;right:1.6vh;top:1.85vh;margin:0;z-index: -1;
-}
-.box-content-admin .box-front .right img:hover{
-    opacity: 0;
-    cursor: pointer;
-}
-.box-content-admin .box-front .right img{
-    height: 50px;
-    width: 50px;
-    margin: 30px;
-    opacity: 1;
+.box-content-admin i{
+    margin-left: 3vh;
     transition: 0.3s;
 }
+.box-content-admin i:hover{
+    color: #7FB5FF;
+}
+
 .box-admin-large.dosen .dropdown{
     display: flex;
     flex-direction: row;
@@ -279,8 +290,8 @@ select{
 .box-admin-large{
     width: 120vh;
     height: 80vh;
-    background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.9));
-    color: #F1EEE9;
+    background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
+    color: #171717;
     overflow: hidden;
     padding: 0 20px;
     border-radius: 20px;
@@ -317,19 +328,18 @@ select{
     align-items: center;
     padding: 10px 30px;
     overflow: hidden;
+    margin: 0;
 }
-
-
-.box-admin-large .head .right img{
-    width: 50px;
-    height: 50px;
+.box-admin-large  i{
     transition: 0.3s;
+    color: #444444;
 }
-
-.box-admin-large .head .right img:hover{
-    content:url("../design/svg-light/circle-chevron-left-solid-hover.svg");
+.box-admin-large  i:hover{
+    color: #7FB5FF;
     cursor: pointer;
 }
+
+
 .box-admin-large table{
     width: 100%;
     padding: 0 30px;
@@ -349,7 +359,7 @@ select{
 }
 .box-admin-large.dosen table td select{
     background-color: #444444;
-    color: #f1eee9;
+    color: white;
 }
 .box-admin-large table td select{
     border-radius: 25px;
@@ -381,15 +391,21 @@ select{
 .table-small .right h3:hover{
     cursor: default;
 }
-.table-small .right img:hover{
+i.fa-trash:hover{
+    color: red;
+}
+i{
+    transition: 0.3s;
+}
+i:hover{
     cursor: pointer;
 }
 
 .box-comment{
     width: 120vh;
     height: 15vh;
-    background: linear-gradient(to right bottom,rgba(23,23,23,0.7),rgba(68,68,68,0.9));
-    color: #F1EEE9;
+    background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
+    color: #171717;
     overflow: hidden;
     border-radius: 20px;
     display: flex;
@@ -465,13 +481,10 @@ select{
     justify-content: space-evenly;
     align-items: center;
 }
-.box-comment img{
-    height: 40px;
-    width: 40px;
+.box-comment .right i{
+    margin-left: 4vh;
 }
-.box-comment img:hover{
-    cursor: pointer;
-}
+
 .box-comment.input{
     height: 8vh;
     display: flex;
@@ -600,6 +613,15 @@ content:url("../design/svg-light/gear-solid-hover-1.svg");
     color: #f1eee9;
 }
 
-.right{
-    margin-left: 5vh;
+.body-right{
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 45vh;
+}
+.body-left{
+    width: 40vh;
+    position: fixed;
+    top: 0;
+    margin:0;
 }

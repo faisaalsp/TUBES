@@ -89,6 +89,18 @@ app.get('/dosenBrowse', async(req, res) => {
     });
 });
 
+app.get('/dosenManageTopik', async(req, res) => {
+    res.render('dosenManageTopik', {
+
+    });
+});
+
+app.get('/dosenReview', async(req, res) => {
+    res.render('dosenReview', {
+
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is ready, listening on port ${PORT}`);
 });

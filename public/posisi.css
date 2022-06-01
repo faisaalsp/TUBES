@@ -13,7 +13,9 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+    height: 50vh;
     overflow: hidden;
+    
 }
 
 .uploadAdmin{
@@ -54,11 +56,11 @@
 
 .manageTopikAdmin{
     background-image: url('../design/gradient_1.jpg');
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background
+    
 }
 
 .commentAdmin{

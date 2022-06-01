@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52415d4f39.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="asset.css">
     <link rel="stylesheet" href="posisi.css">
     <title>Manage Topik</title>
 </head>
 <body class="manageTopikAdmin">
-    <div class="left">
+    <div class="body-left">
         <div class="navigation">
             <div class="user">
-                <img src="../design/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
+                <i class="fa-solid fa-circle-user fa-6x"></i>
                 <h3>Faisal Surya</h3>
                 <p>Administrator</p>
             </div>
             <div class="links">
-                <a href=""></a>
-                <a href="adminDasboard" class="link">
-                    <img src="../design/right-from-bracket-solid.svg" alt="">
+                <a href="adminDasboard" class="link active">
+                    <i class="fa-solid fa-book fa-2x"></i>
                     <h2>Manage Topic</h2>
                 </a>
-                <a href="adminUpload" class="link">
-                    <img src="../design/svg-dark/book-solid.svg" alt="">
+                <a href="adminUpload" class="link ">
+                    <i class="fa-solid fa-cloud-arrow-up fa-2x"></i>
                     <h2>Upload Topic</h2>
                 </a>
                 <a href="adminManageAkun" class="link">
-                    <img src="../design/svg-light/user-pen-solid.svg" alt="">
+                    <i class="fa-solid fa-user-pen fa-2x"></i>
                     <h2>Manage Account</h2>
                 </a>
                 <a href="adminManageTimeline" class="link">
-                    <img src="./design/svg-light/calendar-solid.svg" alt="">
+                    <i class="fa-solid fa-calendar fa-2x"></i>
                     <h2>Manage Timeline</h2>
                 </a>
             </div>
             <div class="logout">
-                <img src="./design/svg-light/right-from-bracket-solid.svg" alt="">
+                <i class="fa-solid fa-arrow-right-from-bracket fa-3x"></i>
             </div>
         </div>
     </div>
 
-    <div class="right">
+    <div class="body-right">
+        <div class="head">
+            <div class="top">
+                <h1>Topic</h1>
+            </div>
+        </div>
         <div class="box-admin-large">
             <div class="head">
                 <div class="left">
@@ -49,7 +54,7 @@
                     <h2>Regular</h2>
                 </div>
                 <div class="right">
-                    <img src="../design/svg-light/circle-chevron-left-solid.svg" alt="">
+                    <a href="adminDasboard"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></a>
                 </div>
             </div>
             <div class="content">
@@ -93,7 +98,7 @@
                                 
                             </td>
                             <td class="right">
-                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                                <i class="fa-solid fa-trash fa-2x"></i>
                             </td>
                         </tr>
                         <tr>
@@ -102,7 +107,7 @@
                                 <h3>Approved</h3>
                             </td>
                             <td class="right">
-                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                                <i class="fa-solid fa-trash fa-2x"></i>
                             </td>
                         </tr>
                         <tr>
@@ -111,7 +116,7 @@
                                 <h3>Approved</h3>
                             </td>
                             <td class="right">
-                                <img src="../design/svg-light/trash-solid.svg" alt="">
+                                <i class="fa-solid fa-trash fa-2x"></i>
                             </td>
                         </tr>
                     </table>
@@ -119,7 +124,66 @@
                 </form>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <div class="head">
+                <div class="top">
+                    <h1>Comment</h1>
+                </div>
+            </div>
+            
+            <div class="box-comment">
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-trash fa-2x"></i>
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br>
+            <div class="box-comment">
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-trash fa-2x"></i>
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br>
+            <div class="box-comment">
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-trash fa-2x"></i>
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br> <br>
+            <div class="box-comment input">
+                <form action="#">
+                    <input type="text" placeholder="Type your message here...">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         </div>
-    </div>
 </body>
 </html>

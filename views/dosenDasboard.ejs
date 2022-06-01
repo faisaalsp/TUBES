@@ -4,74 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52415d4f39.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="asset.css">
     <link rel="stylesheet" href="posisi.css">
     <title>Dashboard Dosen</title>
 </head>
 <body class="dasboardDosen">
-    <div class="left">
+    <div class="body-left">
         <div class="navigation">
             <div class="user">
-                <img src="../design/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
+                <i class="fa-solid fa-circle-user fa-6x"></i>
                 <h3>Faisal Surya</h3>
                 <p>Dosen</p>
             </div>
             <div class="links">
-                <a href=""></a>
-                <a href="dosenDasboard" class="link">
-                    <img src="../design/right-from-bracket-solid.svg" alt="">
+                <a href="dosenDasboard" class="link active">
+                    <i class="fa-solid fa-book fa-2x"></i>
                     <h2>Manage Topic</h2>
                 </a>
                 <a href="dosenUpload" class="link">
-                    <img src="../design/svg-dark/book-solid.svg" alt="">
+                    <i class="fa-solid fa-cloud-arrow-up fa-2x"></i>
                     <h2>Upload Topic</h2>
                 </a>
                 <a href="dosenBrowse" class="link">
-                    <img src="../design/svg-light/user-pen-solid.svg" alt="">
+                    <i class="fa-solid fa-folder-open fa-2x "></i>
                     <h2>Browse</h2>
                 </a>
             </div>
             <div class="logout">
-                <img src="./design/svg-light/right-from-bracket-solid.svg" alt="">
-            </div>
-        </div>
-    </div>
-    
-    <div class="right">
-        <div class="head">
-            <div class="top">
-                <h1>Topic</h1>
-            </div>
-            <div class="bot">
-                <div class="filter" id="filter-active"><p>All</p></div>
-                <div class="filter"><p>Open</p></div>
-                <div class="filter"><p>Approved</p></div>
-                <div class="filter"><p>Declined</p></div>
+                <i class="fa-solid fa-arrow-right-from-bracket fa-3x"></i>
             </div>
         </div>
     
-        <div class="box-content-admin">
-            <div class="box-front">
-                <div class="left">
-                    <h2>Judul</h2>
-                    <h3>Nama Dosen</h3>
-                    <p>Nomor</p>
+        <div class="body-right">
+            <div class="head">
+                <div class="top">
+                    <h1>Topic</h1>
                 </div>
-                <div class="right hover">
-                    <img src="./design/svg-light/cloud-arrow-down-solid-hover.svg" alt="">
-                    <img src="./design/svg-light/gear-solid-hover-1.svg" alt="">
+                <div class="bot">
+                    <div class="filter" id="filter-active"><p>All</p></div>
+                    <div class="filter"><p>Open</p></div>
+                    <div class="filter"><p>Approved</p></div>
+                    <div class="filter"><p>Declined</p></div>
                 </div>
-                <div class="right">
-                    <img src="./design/svg-light/cloud-arrow-down-solid.svg" alt="">
-                    <img src="./design/svg-light/gear-solid.svg" alt="">
-                </div>
-                
             </div>
-            <div class="box-back">
-                <h2>Approved</h2>
-                <h2>Reguler</h2>
+        
+            <div class="box-content-admin">
+                <div class="box-front">
+                    <div class="left">
+                        <h2>Judul</h2>
+                        <h3>Nama Dosen</h3>
+                        <p>Nomor</p>
+                    </div>
+                    
+                    <div class="right">
+                        <i class="fa-solid fa-cloud-arrow-down fa-3x"></i>
+                        <a href="dosenManageTopik"><i class="fa-solid fa-gear fa-3x"></i></a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="box-back">
+                    <h2>Approved</h2>
+                    <h2>Reguler</h2>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
