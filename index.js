@@ -101,6 +101,24 @@ app.get('/dosenReview', async(req, res) => {
     });
 });
 
+app.get('/mahasiswaLogin', async(req, res) => {
+    res.render('mahasiswaLogin', {
+
+    });
+});
+
+app.get('/mahasiswaDasboard', async(req, res) => {
+    res.render('mahasiswaDasboard', {
+
+    });
+});
+
+app.get('/mahasiswaBrowse', async(req, res) => {
+    res.render('mahasiswaBrowse', {
+
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is ready, listening on port ${PORT}`);
 });
