@@ -9,36 +9,40 @@
     <link rel="stylesheet" href="posisi.css">
     <title>Review Topik</title>
 </head>
-<body>
-    <body class="uploadDosen">
-        <div class="left">
-            <div class="navigation">
-                <div class="user">
-                    <img src="../design/profile.jpg" alt="" style="border-radius: 50%;height: 70px;width: 70px;">
-                    <h3>Faisal Surya</h3>
-                    <p>Dosen</p>
-                </div>
-                <div class="links">
-                <a href="dosenDasboard" class="link">
-                    <img src="../design/svg-dark/book-solid.svg" alt="">
+<body class="reviewDosen">
+    <div class="body-left">
+        <div class="navigation">
+            <div class="user">
+                <i class="fa-solid fa-circle-user fa-6x"></i>
+                <h3>Faisal Surya</h3>
+                <p>Dosen</p>
+            </div>
+            <div class="links">
+                <a href="dosenDasboard" class="link active">
+                    <i class="fa-solid fa-book fa-2x"></i>
                     <h2>Manage Topic</h2>
                 </a>
                 <a href="dosenUpload" class="link">
-                    <img src="../design/cloud-arrow-up-solid.svg" alt="">
+                    <i class="fa-solid fa-cloud-arrow-up fa-2x"></i>
                     <h2>Upload Topic</h2>
                 </a>
                 <a href="dosenBrowse" class="link">
-                    <img src="../design/svg-light/folder-open-solid.svg" alt="">
+                    <i class="fa-solid fa-folder-open fa-2x "></i>
                     <h2>Browse</h2>
                 </a>
-                </div>
-                <div class="logout">
-                    <img src="./design/svg-light/right-from-bracket-solid.svg" alt="">
-                </div>
+            </div>
+            <div class="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket fa-3x"></i>
             </div>
         </div>
+    </div>
 
-    <div class="right">
+    <div class="body-right">
+        <div class="head">
+            <div class="top">
+                <h1>Topic</h1>
+            </div>
+        </div>
         <div class="box-admin-large dosen">
             <div class="head">
                 <div class="left">
@@ -46,15 +50,13 @@
                     <h2>Regular</h2>
                 </div>
                 <div class="right">
-                    <img src="../design/svg-dark/circle-chevron-left-solid.svg" alt="">
+                    <a href="dosenDasboard"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></a>
                 </div>
             </div>
             <div class="content">
-                
                 <table>
                     <tr>
                         <td><h2>Status</h2></td>
-                        <!-- <td class="right"><h2>Faisal Surya</h2></td> -->
                     </tr>
                 </table>
                 <form action="#">
@@ -69,26 +71,85 @@
                                     </optgroup>
                                 </Select>
                         </td>
-                            
                         </tr>
                         <tr>
                             <td><h2>Dosen 1</h2></td>
                             <td class="right">
                                 <h3>Approved</h3>
                             </td>
-                            
                         </tr>
                         <tr>
                             <td><h2>Dosen 2</h2></td>
                             <td class="right">
                                 <h3>Approved</h3>
                             </td>
-                            
                         </tr>
                     </table>
                     <input type="submit" value="Save">
                 </form>
             </div>
-    </div>
+        </div>
+            <br>
+            <br>
+            <div class="head">
+                <div class="top">
+                    <h1>Comment</h1>
+                </div>
+            </div>
+            <div class="box-comment dosen">
+                <div class="box-back">
+                    <form action="#">
+                        <input type="text">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br>
+            <div class="box-comment">
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br>
+            <div class="box-comment">
+                <div class="left">
+                    <div class="head">
+                        <h1>Nama Dosen</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Topiknya bagus banget sih bun</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-comment-dots fa-2x"></i>
+                </div>
+            </div>
+            <br> <br>
+            <div class="box-comment input">
+                <form action="#">
+                    <input type="text" placeholder="Type your message here...">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
 </body>
 </html>
