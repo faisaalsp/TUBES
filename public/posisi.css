@@ -1,3 +1,4 @@
+/* ADMIN */
 .loginAdmin{
     background-image: url('../design/gradient_4.jpg');
     display: flex;
@@ -16,6 +17,13 @@
     height: 50vh;
     overflow: hidden;
     
+}
+
+.reviewAdmin{
+    background-image: url('../design/gradient_1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .uploadAdmin{
@@ -71,6 +79,8 @@
     overflow: hidden;
 }
 
+
+/* DOSEN */
 .loginDosen{
     background-image: url('../design/gradient_6.jpg');
     display: flex;
@@ -121,6 +131,8 @@
     background-size: cover;
 }
 
+
+/* MAHASISWA */
 .loginMahasiswa{
     background-image: url('../design/gradient_7.jpg');
     display: flex;

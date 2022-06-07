@@ -101,6 +101,12 @@ app.get('/dosenReview', async(req, res) => {
     });
 });
 
+app.get('/adminReview', async(req, res) => {
+    res.render('adminReview', {
+
+    });
+});
+
 app.get('/mahasiswaLogin', async(req, res) => {
     res.render('mahasiswaLogin', {
 
