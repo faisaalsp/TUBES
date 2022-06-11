@@ -11,6 +11,7 @@ app.use(express.static(publicPath));
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended: true}));
 
+// Connect ke DB
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
@@ -35,6 +36,19 @@ const dbConnect = () => {
 const getSkripsi = conn => {
     return new Promise((resolve, reject) => {
         conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK', (err, result) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(result);
+            }
+        })
+    })
+}
+
+const getLogin = conn => {
+    return new Promise((resolve, reject) => {
+        conn.query('SELECT * FROM Dosen', (err, result) => {
             if(err){
                 reject(err);
             }
@@ -111,9 +125,13 @@ app.get('/dosenLogin', async(req, res) => {
 });
 
 app.get('/dosenDasboard', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getSkripsi(conn)
+    conn.release();
     res.render('dosenDasboard', {
-
+        result
     });
+    console.log(result)
 });
 
 app.get('/dosenUpload', async(req, res) => {

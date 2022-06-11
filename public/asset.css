@@ -194,7 +194,7 @@ select{
 
 }
 .box-content-admin{
-    margin-top: 30vh;
+    margin-top: 19vh;
 }
 
 .box-content-admin .box-front{
@@ -235,7 +235,8 @@ select{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 20%;
+    width: 60%;
+    margin-bottom: 1vh;
 }
 .box-content-admin .box-front .left h2,h3,p{
     margin: 0;
