@@ -11,6 +11,41 @@ app.use(express.static(publicPath));
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended: true}));
 
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'tubes'
+});
+
+const dbConnect = () => {
+    return new Promise((resolve, reject) => {
+        pool.getConnection((err, conn) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(conn);
+            }
+        })
+    })
+}
+
+// Query
+const getSkripsi = conn => {
+    return new Promise((resolve, reject) => {
+        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK', (err, result) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(result);
+            }
+        })
+    })
+}
+
+// Halaman
 app.get('/asset', async(req, res) => {
     res.render('asset', {
 
@@ -30,9 +65,13 @@ app.get('/adminComment', async(req, res) => {
 });
 
 app.get('/adminDasboard', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getSkripsi(conn)
+    conn.release();
     res.render('adminDasboard', {
-
+        result
     });
+    console.log(result)
 });
 
 app.get('/adminUpload', async(req, res) => {
