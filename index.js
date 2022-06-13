@@ -46,7 +46,20 @@ const getSkripsi = conn => {
     })
 }
 
-const getLogin = conn => {
+const getManageTopik = conn => {
+    return new Promise((resolve, reject) => {
+        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK', (err, result) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(result);
+            }
+        })
+    })
+}
+
+const getManageAkun = conn => {
     return new Promise((resolve, reject) => {
         conn.query('SELECT * FROM Dosen', (err, result) => {
             if(err){
@@ -88,14 +101,28 @@ app.get('/adminDasboard', async(req, res) => {
     console.log(result)
 });
 
-app.get('/adminUpload', async(req, res) => {
-    res.render('adminUpload', {
-
+app.get('/adminManageTopik', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getManageTopik(conn)
+    conn.release();
+    res.render('adminManageTopik', {
+        result
     });
+    console.log(result)
 });
 
 app.get('/adminManageAkun', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getManageAkun(conn)
+    conn.release();
     res.render('adminManageAkun', {
+        result
+    });
+    console.log(result)
+});
+
+app.get('/adminUpload', async(req, res) => {
+    res.render('adminUpload', {
 
     });
 });
@@ -108,12 +135,6 @@ app.get('/adminManageTimeline', async(req, res) => {
 
 app.get('/adminManageTimeline2', async(req, res) => {
     res.render('adminManageTimeline2', {
-
-    });
-});
-
-app.get('/adminManageTopik', async(req, res) => {
-    res.render('adminManageTopik', {
 
     });
 });

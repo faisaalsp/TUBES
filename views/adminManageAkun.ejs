@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-
+    <% for (const row of result){ %>
     <div class="body-right">
         <div class="head">
             <div class="top">
@@ -52,10 +52,10 @@
         <div class="box-comment acc">
             <div class="left">
                 <div class="head">
-                    <h1>Faisal Surya</h1>
+                    <h1><%= row.namaDosen %></h1>
                 </div>
                 <div class="content">
-                    <h2>faisalgans@gmail.com</h2>
+                    <h2><%= row.email %></h2>
                 </div>
             </div>
             <div class="right">
@@ -66,7 +66,7 @@
         <div class="box-admin-large acc">
             <div class="head">
                 <div class="left">
-                    <h1>Faisal Surya</h1>
+                    <h1><%= row.namaDosen %></h1>
                 </div>
                 <div class="right">
                     <i class="fa-solid fa-circle-chevron-left fa-3x"></i>
@@ -76,30 +76,31 @@
                <form action="#">
                     <table>
                         <tr>
-                            <td><h2>Nama </h2></td>
-                            <td class="right"><h2>Faisal Surya</h2></td>
+                            <td><h2>Nama</h2></td>
+                            <td class="right"><h2><%= row.namaDosen %></h2></td>
                         </tr>
                         <tr>
                             <td><h2>NIK</h2></td>
-                            <td class="right"><h2>1234681736</h2></td>
+                            <td class="right"><h2><%= row.NIK %></h2></td>
                         </tr>
                         <tr>
                             <td><h2>Email</h2></td>
-                            <td class="right"><h2>faisalgans@gmail.com</h2></td>
+                            <td class="right"><h2><%= row.email %></h2></td>
                         </tr>
                         <tr>
                             <td><h2>Username</h2></td>
-                            <td class="right"><h2>Faisaluyeh</h2></td>
+                            <td class="right"><h2><%= row.username %></h2></td>
                         </tr>
                         <tr>
                             <td><h2>password</h2></td>
-                            <td class="right"><h2>faisalmanis</h2></td>
+                            <td class="right"><h2><%= row.pass %></h2></td>
                         </tr>
                     </table>
                     <input type="submit" value="Save">
                </form>
             </div>
         </div>
+        <% } %>
     </div>
 </body>
 </html>

@@ -49,11 +49,12 @@
                 <h1>Topic</h1>
             </div>
         </div>
+        <% for (const row of result){ %>
         <div class="box-admin-large">
             <div class="head">
                 <div class="left">
-                    <h1>Judul</h1>
-                    <h2>Regular</h2>
+                    <h1><%= row.Judul %></h1>
+                    <h2><%= row.tipe %></h2>
                 </div>
                 <div class="right">
                     <a href="adminDasboard"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></a>
@@ -63,15 +64,15 @@
                 <table>
                     <tr>
                         <td><h2>Nama Dosen</h2></td>
-                        <td class="right"><h2>Faisal Surya</h2></td>
+                        <td class="right"><h2><%= row.namaDosen %></h2></td>
                     </tr>
                     <tr>
                         <td><h2>Nomor</h2></td>
-                        <td class="right"><h2>1234681736</h2></td>
+                        <td class="right"><h2><%= row.noSkripsi %></h2></td>
                     </tr>
                     <tr>
                         <td><h2>Peminatan</h2></td>
-                        <td class="right"><h2>Data Science</h2></td>
+                        <td class="right"><h2><%= row.BidangPeminatan %></h2></td>
                     </tr>
                     <tr>
                         <td><h2>Status</h2></td>
@@ -126,7 +127,7 @@
                 </form>
                 </div>
             </div>
-
+            <% } %>
             <br>
             <br>
             <div class="head">
