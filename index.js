@@ -1,9 +1,11 @@
 import express, { query } from 'express';
+import session from 'express-session';
 import path, { resolve } from 'path';
 import mysql from 'mysql';
 
 const PORT = 8080;
 const app = express();
+// app.use(session());
 
 const publicPath = path.resolve('public');
 app.use(express.static(publicPath));
@@ -48,7 +50,7 @@ const getSkripsi = conn => {
 
 const getManageTopik = conn => {
     return new Promise((resolve, reject) => {
-        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK', (err, result) => {
+        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK WHERE Skripsi.NIK = 1', (err, result) => {
             if(err){
                 reject(err);
             }
@@ -73,7 +75,6 @@ const getManageAkun = conn => {
 }
 
 
-
 // Halaman
 app.get('/asset', async(req, res) => {
     res.render('asset', {
@@ -86,6 +87,11 @@ app.get('/adminLogin', async(req, res) => {
 
     });
 });
+
+// app.post('/adminLogin', express.urlencoded(), async(req, res) => {
+//     const conn = await dbConnect();
+//     const cekUser = 
+// })
 
 app.get('/adminComment', async(req, res) => {
     res.render('adminComment', {
