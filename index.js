@@ -2,10 +2,10 @@ import express, { query } from 'express';
 import session from 'express-session';
 import path, { resolve } from 'path';
 import mysql from 'mysql';
+import { callbackify } from 'util';
 
 const PORT = 8080;
 const app = express();
-// app.use(session());
 
 const publicPath = path.resolve('public');
 app.use(express.static(publicPath));
@@ -157,10 +157,28 @@ app.get('/dosenDasboard', async(req, res) => {
     const conn = await dbConnect();
     let result = await getSkripsi(conn)
     conn.release();
-    res.render('dosenDasboard', {
-        result
-    });
-    console.log(result)
+    let username = req.query.username
+    let password = req.query.password
+    let currUser = conn.query('SELECT * FROM Dosen WHERE username = ' + "'" + username + "'" + 'and pass = ' + "'" + password + "'" , function(err, rows, fields) {
+        if (err) {
+            throw err;
+        }
+        else {
+            setValue(rows[0])
+        }
+    })
+
+    function setValue(value) {
+        currUser = value;
+        if (currUser != null) {
+            res.render('dosenDasboard',  {
+                name : currUser.namaDosen,
+                result
+            })
+        }
+        console.log(currUser)
+    }
+    
 });
 
 app.get('/dosenUpload', async(req, res) => {
