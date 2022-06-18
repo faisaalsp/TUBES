@@ -103,10 +103,27 @@ app.get('/adminDasboard', async(req, res) => {
     const conn = await dbConnect();
     let result = await getSkripsi(conn)
     conn.release();
-    res.render('adminDasboard', {
-        result
-    });
-    console.log(result)
+    let username = req.query.username
+    let password = req.query.password
+    let currUser = conn.query('SELECT * FROM Dosen WHERE username = ' + "'" + username + "'" + 'and pass = ' + "'" + password + "'" , function(err, rows, fields) {
+        if (err) {
+            throw err;
+        }
+        else {
+            setValue(rows[0])
+        }
+    })
+
+    function setValue(value) {
+        currUser = value;
+        if (currUser.statusDosen == "Administrator") {
+            res.render('adminDasboard',  {
+                name : currUser.namaDosen,
+                result
+            })
+        }
+        console.log(currUser)
+    }
 });
 
 app.get('/adminManageTopik', async(req, res) => {
