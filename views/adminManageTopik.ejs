@@ -59,31 +59,31 @@
                 </div>
             </div>
             <div class="content">
-                <table>
-                    <tr>
-                        <td><h2>Nama Dosen</h2></td>
-                        <td class="right"><h2><%= row.namaDosen %></h2></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Nomor</h2></td>
-                        <td class="right"><h2><%= row.noSkripsi %></h2></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Peminatan</h2></td>
-                        <td class="right"><h2><%= row.BidangPeminatan %></h2></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Status</h2></td>
-                        <td class="right">
-                                <Select>
-                                    <optgroup>
-                                        <option selected="selected"value="Declined">Declined</option>
-                                        <option value="Accepted">Accepted</option>
-                                    </optgroup>
-                                </Select>
-                        </td>
-                    </tr>
-                </table>
+                <form action="/adminManageTopik" method="post">
+                    <table>
+                        <tr>
+                            <td><h2>Nama Dosen</h2></td>
+                            <td class="right"><h2><%= row.namaDosen %></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Nomor</h2></td>
+                            <td class="right"><h2><%= row.noSkripsi %></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Peminatan</h2></td>
+                            <td class="right"><h2><%= row.BidangPeminatan %></h2></td>
+                        </tr>
+                        <tr>
+                            <td><h2>Status</h2></td>
+                            <td class="right">
+                                <select name="tipe" id="tipe">
+                                    <option value="Approved" selected>Approved</option>
+                                    <option value="Declined" selected>Declined</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
                 <form action="#">
                     <table class="table-small">
                         <tr>

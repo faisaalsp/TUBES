@@ -112,8 +112,8 @@ app.post('/adminDasboard', async(req, res) => {
     const pass = req.body.password;
     const conn = await dbConnect();
     const login = await getLogin(conn, user, pass)
-    conn.query(`SELECT * FROM Dosen WHERE username = '${user}' AND pass = '${pass}'`, (error, result) => {
-        if(error) throw error;
+    conn.query(`SELECT * FROM Dosen WHERE username = '${user}' AND pass = '${pass}'`, (err, result) => {
+        if(err) throw err;
         if(result.length > 0){
             req.session.loggedin = true;
             req.session.username = user;
@@ -142,7 +142,6 @@ app.get('/adminDasboard', async(req, res) => {
     res.render('adminDasboard', {
         result, nama, status
     });
-    console.log(result)
 });
 
 app.get('/adminManageTopik', async(req, res) => {
@@ -152,7 +151,22 @@ app.get('/adminManageTopik', async(req, res) => {
     res.render('adminManageTopik', {
         result
     });
-    console.log(result)
+});
+
+app.post('/adminManageTopik', async(req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    const tipe = req.body.tipe;
+    if(tipe){
+        conn.query(`UPDATE skripsi SET NIK = '${tipe}'`, (err) => {
+            if(err) throw err;
+            res.redirect('/adminManageTopik');
+            res.end();
+        });
+    }
+    res.render('adminManageTopik', {
+        result
+    });
 });
 
 app.get('/adminManageAkun', async(req, res) => {
@@ -211,7 +225,8 @@ app.get('/dosenDasboard', async(req, res) => {
     let result = await getSkripsi(conn)
     const nama = req.session.nama;
     const status = req.session.status;
-    conn.release();res.render('dosenDasboard', {
+    conn.release()
+    res.render('dosenDasboard', {
         result, nama, status
     });
 });
@@ -222,9 +237,23 @@ app.get('/dosenUpload', async(req, res) => {
     });
 });
 
-app.get('/dosenBrowse', async(req, res) => {
-    res.render('dosenBrowse', {
+app.post('/dosenUpload', async(req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    let input = "INSERT INTO Skripsi SET ?";
+    let topik = {NIK: req.body.nik, noSkripsi: req.body.nomor, Judul: req.body.judul, BidangPeminatan: req.body.peminatan, Tipe: req.body.tipe}
+    conn.query(input, topik, (error, results, fields) => {
+        if (error) throw error;
+        res.redirect('dosenUpload')
+        });
+});
 
+app.get('/dosenBrowse', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getSkripsi(conn)
+    conn.release()
+    res.render('dosenBrowse', {
+        result
     });
 });
 

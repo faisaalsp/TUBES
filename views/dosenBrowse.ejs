@@ -58,26 +58,26 @@
                 <div class="filter"><p>Close</p></div>
             </div>
         </div>
-    
+        <% for (const row of result){ %> 
         <div class="box-content-admin">
             <div class="box-front">
                 <div class="left">
-                    <h2>Judul</h2>
-                    <h3>Nama Dosen</h3>
-                    <p>Nomor</p>
+                    <h2><%= row.Judul %></h2>
+                    <h2><%= row.namaDosen %></h2>
+                    <p><%= row.noSkripsi %></p>
                 </div>
-                
+                        
                 <div class="right">
                     <i class="fa-solid fa-cloud-arrow-down fa-3x"></i>
-                    
+                    <a href="dosenManageTopik"><i class="fa-solid fa-gear fa-3x"></i></a>
                 </div>
-                
             </div>
             <div class="box-back">
-                <h2>Approved</h2>
-                <h2>Reguler</h2>
+                <h2><%= row.status %></h2>
+                <h2><%= row.Tipe %></h2>
             </div>
         </div>
+        <% } %> 
     </div>
 </body>
 </html>
