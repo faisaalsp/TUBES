@@ -14,8 +14,6 @@
         <div class="navigation">
             <div class="user">
                 <i class="fa-solid fa-circle-user fa-6x"></i>
-                <h3>Faisal Surya</h3>
-                <p>Administrator</p>
             </div>
             <div class="links">
                 <a href="adminDasboard" class="link">
@@ -36,7 +34,7 @@
                 </a>
             </div>
             <div class="logout">
-                <a href="adminLogin" class="link">
+                <a href="login" class="link">
                     <i class="fa-solid fa-arrow-right-from-bracket fa-3x"></i>
                 </a>
             </div>
@@ -51,8 +49,14 @@
         </div>
         <div class="box-admin-large input">
             <div class="content">
-                <form method="POST" action="../views/adminUpload.ejs">
+                <form method="post" action="/adminUpload">
                     <table>
+                        <tr class="row">
+                            <td><label for="nomor">NIK</label></td>
+                            <td>
+                                <input type="text" name="nik">
+                            </td>
+                        </tr>
                         <tr class="row">
                             <td><label for="nomor">Nomor</label></td>
                             <td>
@@ -70,15 +74,15 @@
                             <td><label for="peminatan">Peminatan</label></td>
                             <td>
                                 <select name="peminatan" id="peminatan">
-                                    <option value="Data Science" selected>Computing Science</option>
+                                    <option value="Computing Science" selected>Computing Science</option>
                                     <option value="Data Science" selected>Data Science</option>
                                 </select>
                             </td>
                             <td><label for="peminatan">Tipe</label></td>
                             <td>
-                                <select name="peminatan" id="peminatan">
-                                    <option value="Data Science" selected>Bintang</option>
-                                    <option value="Data Science" selected>Reguler</option>
+                                <select name="tipe" id="tipe">
+                                    <option value="Bintang" selected>Bintang</option>
+                                    <option value="Reguler" selected>Reguler</option>
                                 </select>
                             </td>
                             <td><label for="file">File</label></td>

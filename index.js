@@ -1,11 +1,16 @@
 import express, { query } from 'express';
 import session from 'express-session';
+import bodyParser from 'body-parser';
 import path, { resolve } from 'path';
 import mysql from 'mysql';
-import { callbackify } from 'util';
 
 const PORT = 8080;
 const app = express();
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 const publicPath = path.resolve('public');
 app.use(express.static(publicPath));
@@ -35,6 +40,19 @@ const dbConnect = () => {
 }
 
 // Query
+const getLogin = (conn, user, pass) => {
+    return new Promise((resolve, reject) => {
+        conn.query(`SELECT * FROM Dosen WHERE username = '${user}' AND pass = '${pass}'`, (err, result) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(result);
+            }
+        })
+    })
+}
+
 const getSkripsi = conn => {
     return new Promise((resolve, reject) => {
         conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK', (err, result) => {
@@ -75,55 +93,56 @@ const getManageAkun = conn => {
 }
 
 
-// Halaman
+// Halaman Login
 app.get('/asset', async(req, res) => {
     res.render('asset', {
 
     });
 });
 
-app.get('/adminLogin', async(req, res) => {
-    res.render('adminLogin', {
+app.get('/login', async(req, res) => {
+    res.render('login', {
 
     });
 });
 
-// app.post('/adminLogin', express.urlencoded(), async(req, res) => {
-//     const conn = await dbConnect();
-//     const cekUser = 
-// })
-
-app.get('/adminComment', async(req, res) => {
-    res.render('adminComment', {
-
-    });
+// ADMIN
+app.post('/adminDasboard', async(req, res) => {
+    const user = req.body.username;
+    const pass = req.body.password;
+    const conn = await dbConnect();
+    const login = await getLogin(conn, user, pass)
+    conn.query(`SELECT * FROM Dosen WHERE username = '${user}' AND pass = '${pass}'`, (error, result) => {
+        if(error) throw error;
+        if(result.length > 0){
+            req.session.loggedin = true;
+            req.session.username = user;
+            req.session.nama = result[0].namaDosen;
+            req.session.status = result[0].statusDosen;
+            if(result[0].statusDosen == "Administrator"){
+                res.redirect('/adminDasboard')
+            }
+            else if(result[0].statusDosen == "Dosen"){
+                res.redirect('/dosenDasboard')
+            }
+        }
+        else{
+            res.send("Maaf username atau password salah")
+        }
+        res.end();
+    })
 });
 
 app.get('/adminDasboard', async(req, res) => {
     const conn = await dbConnect();
     let result = await getSkripsi(conn)
+    const nama = req.session.nama;
+    const status = req.session.status;
     conn.release();
-    let username = req.query.username
-    let password = req.query.password
-    let currUser = conn.query('SELECT * FROM Dosen WHERE username = ' + "'" + username + "'" + 'and pass = ' + "'" + password + "'" , function(err, rows, fields) {
-        if (err) {
-            throw err;
-        }
-        else {
-            setValue(rows[0])
-        }
-    })
-
-    function setValue(value) {
-        currUser = value;
-        if (currUser.statusDosen == "Administrator") {
-            res.render('adminDasboard',  {
-                name : currUser.namaDosen,
-                result
-            })
-        }
-        console.log(currUser)
-    }
+    res.render('adminDasboard', {
+        result, nama, status
+    });
+    console.log(result)
 });
 
 app.get('/adminManageTopik', async(req, res) => {
@@ -143,13 +162,23 @@ app.get('/adminManageAkun', async(req, res) => {
     res.render('adminManageAkun', {
         result
     });
-    console.log(result)
 });
 
 app.get('/adminUpload', async(req, res) => {
     res.render('adminUpload', {
 
     });
+});
+
+app.post('/adminUpload', async(req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    let input = "INSERT INTO Skripsi SET ?";
+    let topik = {NIK: req.body.nik, noSkripsi: req.body.nomor, Judul: req.body.judul, BidangPeminatan: req.body.peminatan, Tipe: req.body.tipe}
+    conn.query(input, topik, (error, results, fields) => {
+        if (error) throw error;
+        res.redirect('adminUpload')
+        });
 });
 
 app.get('/adminManageTimeline', async(req, res) => {
@@ -164,6 +193,13 @@ app.get('/adminManageTimeline2', async(req, res) => {
     });
 });
 
+app.get('/adminReview', async(req, res) => {
+    res.render('adminReview', {
+
+    });
+});
+
+// DOSEN
 app.get('/dosenLogin', async(req, res) => {
     res.render('dosenLogin', {
 
@@ -173,29 +209,11 @@ app.get('/dosenLogin', async(req, res) => {
 app.get('/dosenDasboard', async(req, res) => {
     const conn = await dbConnect();
     let result = await getSkripsi(conn)
-    conn.release();
-    let username = req.query.username
-    let password = req.query.password
-    let currUser = conn.query('SELECT * FROM Dosen WHERE username = ' + "'" + username + "'" + 'and pass = ' + "'" + password + "'" , function(err, rows, fields) {
-        if (err) {
-            throw err;
-        }
-        else {
-            setValue(rows[0])
-        }
-    })
-
-    function setValue(value) {
-        currUser = value;
-        if (currUser != null) {
-            res.render('dosenDasboard',  {
-                name : currUser.namaDosen,
-                result
-            })
-        }
-        console.log(currUser)
-    }
-    
+    const nama = req.session.nama;
+    const status = req.session.status;
+    conn.release();res.render('dosenDasboard', {
+        result, nama, status
+    });
 });
 
 app.get('/dosenUpload', async(req, res) => {
@@ -218,30 +236,6 @@ app.get('/dosenManageTopik', async(req, res) => {
 
 app.get('/dosenReview', async(req, res) => {
     res.render('dosenReview', {
-
-    });
-});
-
-app.get('/adminReview', async(req, res) => {
-    res.render('adminReview', {
-
-    });
-});
-
-app.get('/mahasiswaLogin', async(req, res) => {
-    res.render('mahasiswaLogin', {
-
-    });
-});
-
-app.get('/mahasiswaDasboard', async(req, res) => {
-    res.render('mahasiswaDasboard', {
-
-    });
-});
-
-app.get('/mahasiswaBrowse', async(req, res) => {
-    res.render('mahasiswaBrowse', {
 
     });
 });

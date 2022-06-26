@@ -1,6 +1,6 @@
 /* ADMIN */
-.loginAdmin{
-    background-image: url('../design/gradient_4.jpg');
+.login{
+    background-image: url('../design/gradient_7.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,6 @@
     flex-direction: row;
     justify-content: left;
     height: 50vh;
-    overflow: hidden;
     
 }
 
@@ -81,16 +80,6 @@
 
 
 /* DOSEN */
-.loginDosen{
-    background-image: url('../design/gradient_6.jpg');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
 .dasboardDosen{
     background-image: url('../design/gradient_5.jpg');
     background-size: 100%;
@@ -129,33 +118,4 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-
-/* MAHASISWA */
-.loginMahasiswa{
-    background-image: url('../design/gradient_7.jpg');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.dasboardMahasiswa{
-    background-image: url('../design/gradient_8.jpg');
-    background-size: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    overflow: hidden;
-}
-
-.browseMahasiswa{
-    background-image: url('../design/gradient_8.jpg');
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    overflow: hidden;
 }
