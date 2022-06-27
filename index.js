@@ -166,6 +166,15 @@ app.get('/adminManageTopik', async(req, res) => {
     });
 });
 
+app.post('/hapus', async(req, res) => {
+    const conn = await dbConnect();
+    let comm = "DELETE Skripsi FROM Skripsi WHERE noSkripsi = 3";
+    conn.query(comm, function(error, results, fields) {
+        if (error) throw error;
+        res.redirect('/adminManageTopik');
+        });
+});
+
 app.post('/adminManageTopik', async(req, res) => {
     const conn = await dbConnect();
     conn.release();

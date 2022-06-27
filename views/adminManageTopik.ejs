@@ -59,44 +59,44 @@
                 </div>
             </div>
             <div class="content">
-                <form action="/adminManageTopik" method="post">
-                    <table>
-                        <tr>
-                            <td><h2>Nama Dosen</h2></td>
-                            <td class="right"><h2><%= row.namaDosen %></h2></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Nomor</h2></td>
-                            <td class="right"><h2><%= row.noSkripsi %></h2></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Peminatan</h2></td>
-                            <td class="right"><h2><%= row.BidangPeminatan %></h2></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Status</h2></td>
-                            <td class="right">
-                                <select name="tipe" id="tipe">
-                                    <option value="Approved" selected>Approved</option>
-                                    <option value="Declined" selected>Declined</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
+                <form action="/hapus" method="post">
+                    <form action="/adminManageTopik" method="post">
+                        <table>
+                            <tr>
+                                <td><h2>Nama Dosen</h2></td>
+                                <td class="right"><h2><%= row.namaDosen %></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Nomor</h2></td>
+                                <td class="right"><h2><%= row.noSkripsi %></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Peminatan</h2></td>
+                                <td class="right"><h2><%= row.BidangPeminatan %></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Status</h2></td>
+                                <td class="right">
+                                    <select name="tipe" id="tipe">
+                                        <option value="Approved" selected>Approved</option>
+                                        <option value="Declined" selected>Declined</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="submit"><i class="fa-solid fa-trash fa-2x"></i></button>
+                    </form>
                 </form>
                 <form action="#">
                     <table class="table-small">
                         <tr>
                             <td><h2>Anda</h2></td>
                             <td class="right">
-                                <Select>
-                                    <optgroup>
-                                        <option selected="selected"value="Ok">OK</option>
-                                        <option value="Accepted">NO</option>
-                                        <option value="Accepted">INQ</option>
-                                    </optgroup>
-                                </Select>
-                                
+                                <select name="tipe" id="tipe">
+                                    <option value="OK" selected>OK</option>
+                                    <option value="NO" selected>NO</option>
+                                    <option value="INQ" selected>INQ</option>
+                                </select>
                             </td>
                             <td class="right">
                                 <i class="fa-solid fa-trash fa-2x"></i>

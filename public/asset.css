@@ -287,7 +287,7 @@ select{
 
 .box-admin-large{
     width: 120vh;
-    height: 80vh;
+    height: 90vh;
     background: linear-gradient(to right bottom,rgba(115,119,123, 0.7),rgba(241,238,233,0.9));
     color: #171717;
     overflow: hidden;
