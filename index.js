@@ -79,6 +79,19 @@ const getManageTopik = conn => {
     })
 }
 
+const getManageTopik2 = conn => {
+    return new Promise((resolve, reject) => {
+        conn.query('SELECT Judul, Tipe FROM Skripsi WHERE NIK = 1', (err, result) => {
+            if(err){
+                reject(err);
+            }
+            else{
+                resolve(result);
+            }
+        })
+    })
+}
+
 const getManageAkun = conn => {
     return new Promise((resolve, reject) => {
         conn.query('SELECT * FROM Dosen', (err, result) => {
@@ -158,7 +171,7 @@ app.post('/adminManageTopik', async(req, res) => {
     conn.release();
     const tipe = req.body.tipe;
     if(tipe){
-        conn.query(`UPDATE skripsi SET NIK = '${tipe}'`, (err) => {
+        conn.query(`UPDATE Skripsi SET status = '${tipe}' WHERE status = '${tipe}'`, (err) => {
             if(err) throw err;
             res.redirect('/adminManageTopik');
             res.end();
@@ -258,8 +271,10 @@ app.get('/dosenBrowse', async(req, res) => {
 });
 
 app.get('/dosenManageTopik', async(req, res) => {
+    const conn = await dbConnect();
+    let result = await getManageTopik2(conn)
     res.render('dosenManageTopik', {
-
+        result
     });
 });
 

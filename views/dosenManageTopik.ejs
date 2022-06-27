@@ -43,11 +43,12 @@
                 <h1>Topic</h1>
             </div>
         </div>
+        <% for (const row of result){ %>
         <div class="box-admin-large dosen">
             <div class="head">
                 <div class="left">
-                    <h1>Judul</h1>
-                    <h2>Regular</h2>
+                    <h1><%= row.Judul %></h1>
+                    <h2><%= row.Tipe %></h2>
                 </div>
                 <div class="right">
                     <a href="dosenDasboard"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></a>
@@ -64,7 +65,6 @@
                 <table>
                     <tr>
                         <td><h2>Status</h2></td>
-                        <!-- <td class="right"><h2>Faisal Surya</h2></td> -->
                     </tr>
                 </table>
                 <form action="#">
@@ -95,6 +95,7 @@
                 </form>
             </div>
         </div>
+        <% } %>
 
             <br>
             <br>

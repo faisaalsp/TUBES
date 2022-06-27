@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/52415d4f39.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="asset.css">
     <link rel="stylesheet" href="posisi.css">
+    <script src="../public/filter.js"></script>
     <title>Dashboard Dosen</title>
 </head>
 <body class="dasboardDosen">
@@ -45,10 +46,12 @@
             </div>
             <div class="bot">
                 <div class="filter" id="filter-active"><p>All</p></div>
-                <div class="filter"><p>Open</p></div>
-                <div class="filter"><p>Approved</p></div>
-                <div class="filter"><p>Declined</p></div>
-                <a href="dosenReview"><div class="filter"><p>Review</p></div></a>
+                <div class="filter" id="apporved"><p>Approved</p></div>
+                <div class="filter" id="declined"><p>Declined</p></div>
+                <div class="filter" id="open"><p>Open</p></div>
+                <div class="filter" id="close"><p>Close</p></div>
+                <div class="filter" id="taken"><p>Taken</p></div>
+                <a href="adminReview"><div class="filter" id="review"><p>Review</p></div></a>
             </div>
         </div>
     <% for (const row of result){ %> 
