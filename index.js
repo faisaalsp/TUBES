@@ -68,7 +68,7 @@ const getSkripsi = conn => {
 
 const getManageTopik = conn => {
     return new Promise((resolve, reject) => {
-        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK WHERE Skripsi.NIK = 1', (err, result) => {
+        conn.query('SELECT * FROM Skripsi JOIN Dosen ON Skripsi.NIK = Dosen.NIK WHERE Skripsi.noSkripsi = 3', (err, result) => {
             if(err){
                 reject(err);
             }
@@ -81,7 +81,7 @@ const getManageTopik = conn => {
 
 const getManageTopik2 = conn => {
     return new Promise((resolve, reject) => {
-        conn.query('SELECT Judul, Tipe FROM Skripsi WHERE NIK = 1', (err, result) => {
+        conn.query('SELECT Judul, Tipe FROM Skripsi WHERE noSkripsi = 1', (err, result) => {
             if(err){
                 reject(err);
             }
